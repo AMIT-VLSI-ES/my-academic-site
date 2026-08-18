@@ -3,123 +3,237 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Academic Homepage</title>
+    <title>Amit Kumar - Academic Homepage</title>
     <style>
-        * { box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; background-color: #f9f9f9; }
-        .header { background: #fff; padding: 20px 10%; border-bottom: 1px solid #ddd; display: flex; align-items: center; gap: 20px; }
-        .header img { height: 50px; }
-        .header h1 { margin: 0; font-size: 1.4rem; color: #222; }
-        .container { display: flex; max-width: 1200px; margin: 20px auto; padding: 0 20px; gap: 30px; }
-        .main-content { flex: 1; background: #fff; padding: 30px; border-radius: 4px; border: 1px solid #e0e0e0; }
-        .toc { width: 250px; background: #fff; padding: 20px; border-radius: 4px; border: 1px solid #e0e0e0; height: fit-content; position: sticky; top: 20px; }
-        .toc h3 { margin-top: 0; font-size: 1.1rem; border-bottom: 1px solid #eee; padding-bottom: 8px; }
-        .toc ul { list-style: none; padding-left: 0; margin: 0; }
-        .toc ul ul { padding-left: 15px; }
-        .toc a { color: #0056b3; text-decoration: none; font-size: 0.9rem; }
-        .toc a:hover { text-decoration: underline; }
-        .profile-section { display: flex; gap: 20px; margin-bottom: 30px; }
-        .profile-photo { width: 150px; height: 180px; background: #eee; object-fit: cover; border-radius: 4px; }
-        h2 { border-bottom: 2px solid #0056b3; padding-bottom: 5px; color: #222; margin-top: 40px; }
-        h3 { color: #444; margin-top: 20px; }
-        ul { padding-left: 20px; }
-        li { margin-bottom: 6px; }
-        @media (max-width: 768px) {
-            .container { flex-direction: column-reverse; }
-            .toc { width: 100%; position: static; }
-            .profile-section { flex-direction: column; }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #34495e;
+            margin-bottom: 5px;
+        }
+        .contact-info p {
+            margin: 3px 0;
+        }
+        .job-title, .edu-title {
+            font-weight: bold;
+        }
+        .date {
+            float: right;
+            color: #666;
+        }
+        .clear {
+            clear: both;
+        }
+        ul {
+            margin-top: 5px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .skills-group {
+            margin-bottom: 10px;
+        }
+        .skills-group strong {
+            display: inline-block;
+            width: 180px;
         }
     </style>
 </head>
 <body>
 
-    <header class="header">
-        <div>
-            <h1>Department of Electrical Engineering</h1>
-            <p style="margin: 0; color: #666; font-size: 0.9rem;">Your University Name</p>
+    <header>
+        <h1>Amit Kumar</h1>
+        <div class="contact-info">
+            <p><strong>Phone:</strong> +91 7057920180 | <strong>Email:</strong> sheoranamit21@gmail.com</p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/amit-kumar-rtl/" target="_blank">linkedin.com/in/amit-kumar-rtl/</a></p>
+            <p><strong>Location:</strong> Ph.D. Scholar, Devices and System Heterointegration (DESH) Group, EE, IIT Bombay</p>
         </div>
     </header>
 
-    <div class="container">
-        <main class="main-content">
-            <h1 id="top">Your Name</h1>
+    <section id="education">
+        <h2>Education</h2>
+        
+        <div>
+            <span class="date">Jan 2025 – Present</span>
+            <div class="edu-title">Ph.D. - Integrated Circuit and Systems (ICS)</div>
+            <div>Indian Institute of Technology, Bombay</div>
+        </div>
+        <br>
+        <div>
+            <span class="date">May 2022</span>
+            <div class="edu-title">M.Tech - VLSI and Embedded System</div>
+            <div>Defence Institute of Advanced Technology, Pune</div>
+        </div>
+        <br>
+        <div>
+            <span class="date">June 2018</span>
+            <div class="edu-title">B.E. - Electronics and Telecommunication Engineering</div>
+            <div>JSPM’s Imperial College of Engineering and Technology, SPPU, Pune</div>
+        </div>
+    </section>
+
+    <section id="research">
+        <h2>Research Experience</h2>
+        
+        <div>
+            <span class="date">On-going</span>
+            <div class="job-title">Devices and System Heterointegration (DESH) Group, EE, IIT Bombay</div>
+            <p><em>Project: ASIC Implementation of PULP-PULPissimo with Chiplet-Based In-Memory Compute Extensions</em></p>
+            <ul>
+                <li>Executing the full RTL-to-GDSII flow for the PULP-PULPissimo RISC-V SoC, integrating RTL, synthesis, floorplanning, place-and-route, and sign-off for a tapeout-ready design.</li>
+                <li>Extending the PULP-PULPissimo SoC architecture with custom die-to-die links enabling near-memory and in-memory compute accelerators for edge-AI workloads.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Professional Experience</h2>
+
+        <div>
+            <span class="date">July 2022 – Sep 2024</span>
+            <div class="job-title">LeWiz Communication, San Jose, CA, USA (WFH) — Hardware Design Engineer</div>
             
-            <div class="profile-section">
-                <img src="https://via.placeholder.com/150x180" alt="Your Photo" class="profile-photo">
-                <div>
-                    <p><strong>Designation / Role</strong><br>
-                    Department of Electrical Engineering<br>
-                    University Name, City, Country</p>
-                    <p><strong>Email:</strong> yourname[AT]domain.edu<br>
-                    <strong>Phone:</strong> +1 (123) 456-7890</p>
-                </div>
-            </div>
-
-            <h2 id="cv">Curriculum Vitae</h2>
-            
-            <h3 id="academic-background">Academic Background</h3>
+            <p><strong>Project: Time Sensitive Network (TSN) IP Core</strong></p>
             <ul>
-                <li><strong>Ph.D.</strong> Electrical Engineering, University Name (2020)</li>
-                <li><strong>B.Tech.</strong> Electrical Engineering, Institute Name (2015)</li>
+                <li>Worked on the design and implementation of IEEE 1588 Precision Time Protocol (PTP) and IEEE 802.1AS Time Sensitive Network, translating complex standards into detailed micro-architectural specifications, ensuring compliance and performance.</li>
+                <li>Successfully implemented a fault-tolerant timing module, improving system reliability and performance of TSN design.</li>
+                <li>Developed a comprehensive test plan for verification, ensuring compliance with IEEE standards and improving the reliability of time-sensitive applications.</li>
+                <li>Conducted thorough verification of RTL code through extensive simulation, ensuring precise clock synchronization and adherence to protocol specifications.</li>
+                <li>Collaborated closely with the FPGA Team to implement TSN designs on ZCU216 FPGA boards, achieving stringent timing accuracy and robustness in real-world applications.</li>
             </ul>
 
-            <h3 id="work-experience">Work Experience</h3>
+            <p><strong>Project: AXI4-MM and AXI4-Stream Bridge IP Core</strong></p>
             <ul>
-                <li><strong>Associate Professor</strong>, University Name (2022 – Present)</li>
-                <li><strong>Postdoctoral Fellow</strong>, Research Lab Name (2020 – 2022)</li>
+                <li>Engineered a robust bridge interface between AXI4-MM and AXI4-Stream protocol converter that encapsulates address, data, and response channels into AXIS packets using TDATA packing and TID-based channel demultiplexing.</li>
+                <li>Improved data integrity and flow control by designing FIFO-backed AXI-target/initiator state machines supporting burst, response, and read/write pipelining.</li>
             </ul>
 
-            <h2 id="research">Research</h2>
-            
-            <h3 id="research-interests">Research Interests</h3>
-            <p>Write a brief summary of your core research areas, long-term goals, and specialized topics here.</p>
-
-            <h3 id="publications">Publications</h3>
-            <p>View complete citations on <a href="https://scholar.google.com" target="_blank">Google Scholar</a>.</p>
-
-            <h3 id="patents">Patents</h3>
-            <ol>
-                <li>"Title of Patent 1", Patent Number (Year).</li>
-                <li>"Title of Patent 2", Patent Number (Year).</li>
-            </ol>
-
-            <h2 id="students">Students & Postdocs</h2>
+            <p><strong>Project: Scatter-Gather Direct Access Memory (DMA) IP Core</strong></p>
             <ul>
-                <li><strong>Ph.D. Students:</strong> Student Name (Graduation Year / Current Role)</li>
-                <li><strong>M.Tech Students:</strong> Student Name (Graduation Year / Current Role)</li>
+                <li>Designed a high-bandwidth AXI4-Stream DMA engine supporting both direct register mode and scatter-gather mode to move data between system memory and streaming accelerators.</li>
+                <li>Enabled CPU-offloaded, zero-copy data movement by implementing MM2S and S2MM data paths with descriptor-driven transfers, FIFO buffering, arbitration, and interrupt-based completion.</li>
             </ul>
 
-            <h2 id="teaching">Teaching</h2>
+            <p><strong>Project: AXI-Lite Register Interface Design</strong></p>
             <ul>
-                <li>EE101: Introduction to Electrical Engineering</li>
-                <li>EE501: Advanced Solid State Devices</li>
+                <li>Built an efficient configurable AXI-lite based register interface to control and monitor multiple hardware modules using well-defined address maps and control/status registers.</li>
+                <li>Improved system bring-up and debug by providing deterministic register access, interrupt handling, and software-visible status reporting.</li>
             </ul>
-        </main>
+        </div>
+    </section>
 
-        <nav class="toc">
-            <h3>Table of Contents</h3>
+    <section id="internships">
+        <h2>Internships</h2>
+
+        <div>
+            <span class="date">Dec 2021 – June 2022</span>
+            <div class="job-title">DRDO (Scientific Analysis Group) — Delhi</div>
+            <p><em>Project: Design and Characterization of Romulus Lightweight Authenticated Encryption IP Core</em></p>
             <ul>
-                <li><a href="#top">Profile</a></li>
-                <li>
-                    <a href="#cv">Curriculum Vitae</a>
-                    <ul>
-                        <li><a href="#academic-background">Academic Background</a></li>
-                        <li><a href="#work-experience">Work Experience</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#research">Research</a>
-                    <ul>
-                        <li><a href="#research-interests">Interests</a></li>
-                        <li><a href="#publications">Publications</a></li>
-                        <li><a href="#patents">Patents</a></li>
-                    </ul>
-                </li>
-                <li><a href="#students">Students</a></li>
-                <li><a href="#teaching">Teaching</a></li>
+                <li>Engaged in the design and validation of energy-efficient encryption algorithms for the Romulus lightweight block cipher, focusing on optimizing performance for secure applications.</li>
+                <li>Conducted extensive testing and characterization of encryption and decryption processes, ensuring compliance with industry standards and enhancing security measures.</li>
             </ul>
-        </nav>
-    </div>
+        </div>
+
+        <div>
+            <span class="date">Aug 2021 – Nov 2021</span>
+            <div class="job-title">National Technical Research Organization — New Delhi</div>
+            <p><em>Project: Secure Private-Network Python Repository and Server Infrastructure</em></p>
+            <ul>
+                <li>Designed and deployed a secure Python repository on a private network, integrating physical servers, operating systems, and controlled access mechanisms for sensitive data handling.</li>
+                <li>Installed, configured, and managed multiple servers with enforced security protocols, improving reliability, scalability, and operational efficiency of internal data infrastructure.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="coursework">
+        <h2>Ph.D. Coursework</h2>
+        <ul>
+            <li><strong>EE739 – Processor Design (Prof. Virendra Singh):</strong> CISC/RISC design, microcoded control, datapaths, controllers, pipelining, hazard handling, superscalar architectures, dynamic pipelines, register renaming, reservation stations, reorder buffers, branch prediction, and SMT.</li>
+            <li><strong>EE709 – Testing and Verification (Prof. Madhav P. Desai):</strong> DFT methodologies, stuck-at fault models, ATPG, BIST, formal verification techniques, and verification environments.</li>
+            <li><strong>EE671 – VLSI Design (Prof. Laxmeesha Somappa):</strong> Combinational/sequential circuits using CMOS logic, SPICE-level simulations for timing, power, and noise.</li>
+            <li><strong>EE721 – Hardware Description Languages (Prof. Sachin B. Patkar):</strong> Verilog/SystemVerilog for RTL design, synthesizable modules, and self-checking testbenches.</li>
+            <li><strong>EE712 – Embedded Systems Design (Prof. Laxmeesha Somappa):</strong> Microcontroller architectures, firmware design, real-time constraints, and modules involving sensors and control logic.</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Ph.D. Course Projects</h2>
+
+        <div>
+            <h3>Design and Implementation of a 6-Stage Pipelined IITB-RISC-25 Processor</h3>
+            <p><em>Instructor: Prof. Virendra Singh</em></p>
+            <ul>
+                <li>Designed and implemented a 16-bit, 6-stage pipelined RISC processor (IF, ID, RR, EX, MEM, WB) supporting predicated execution, multiple load/store operations, and R/I/J-type instructions with forwarding-based hazard mitigation.</li>
+                <li>Developed the datapath, controller, and pipeline control logic to improve performance while ensuring correct exception handling and instruction execution in compliance with the IITB-RISC-25 ISA.</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>CMOS Standard Cell Design and Characterization for VLSI Digital Libraries</h3>
+            <p><em>Instructor: Prof. Laxmeesha Somappa</em></p>
+            <ul>
+                <li>Developed inverter, O21A, and DFF standard cells through schematic design, layout implementation, PEX extraction, and full DRC/LVS verification.</li>
+                <li>Characterized each cell for timing, power, and input capacitance to generate complete multi-view models for digital synthesis and physical design.</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>Vector-Parallel Hardware Graphics Accelerator on Pynq-Z2</h3>
+            <p><em>Instructor: Prof. Laxmeesha Somappa</em></p>
+            <ul>
+                <li>Implemented a parallel triangle-rasterization graphics accelerator on an FPGA, using a custom AXI-Lite/AXI-Stream hardware rasterizer and HDMI video pipeline.</li>
+                <li>Rendered 2D graphics in real time by computing pixel coverage for all screen pixels in hardware, achieving high-speed rasterization independent of the processor.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skills-group">
+            <strong>Programming Languages:</strong> Verilog, SystemVerilog
+        </div>
+        <div class="skills-group">
+            <strong>Scripting:</strong> TCL, Python
+        </div>
+        <div class="skills-group">
+            <strong>Protocols:</strong> AMBA (AXI, APB), Ethernet, IEEE 1588 PTP, IEEE 802.1AS, UART, SPI, I2C
+        </div>
+        <div class="skills-group">
+            <strong>EDA Tools & Environments:</strong> Genus, Magic, Innovus, ModelSim, Synopsys VCS, Vivado, Vivado SDK, Vitis
+        </div>
+    </section>
+
+    <section id="achievements">
+        <h2>Academic Achievements</h2>
+        <ul>
+            <li>AIR 4 in Stand India Project Competition 2017, organized by AICTE, New Delhi.</li>
+            <li>GATE - 2020 Qualified.</li>
+            <li>Received funding from AICTE during Master’s Program.</li>
+        </ul>
+    </section>
 
 </body>
 </html>
